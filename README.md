@@ -7,6 +7,8 @@ An online shop for PearlyBeau, a female-led watch brand from Lagos, with a glass
 - **Colours:** Milk `#FBF7F4`, Oat `#E5DED2`, Taupe `#A39382`, Mocha `#685D54`, Charcoal `#232323`, plus the brand's rose gold `#C38F73` for stars and hearts.
 - **Type:** Instrument Sans for the logo and interface, Instrument Serif for headlines.
 - **Motion:** slow background drift, light reflections that follow the cursor on glass panels, scroll reveals, magnetic buttons and a tilting product preview. All of it switches off when the visitor has reduced motion turned on.
+- **Accessibility:** checked with axe-core (WCAG 2.2 AA) on every page at phone, tablet and desktop widths. Skip link, keyboard-friendly watch picker with screen-reader announcements, pause button on the scrolling logos, visible focus rings, and fallbacks for reduced motion, reduced transparency and Windows high-contrast mode.
+- **Speed:** no framework and no build step. The hero image and JS modules are preloaded, other images load lazily with fixed sizes so nothing jumps, and the review portraits are 2 KB SVGs.
 
 ## Pages
 
@@ -42,7 +44,8 @@ The cart, wishlist, orders and account stay in the browser's `localStorage`.
 ## Editing
 
 - **Products, prices, delivery rates, promo codes:** `js/data.js`. The prices are placeholders.
-- **Home page copy** (hero, stockist names, reviews, pricing tiers, FAQ): `js/content.js`. The stockist names and reviews are made up. Replace them with real ones before launch. Review photos load from randomuser.me, and initials show if they can't load.
+- **Home page copy** (hero, stockist names, reviews, pricing tiers, FAQ): `js/content.js`. The stockist names and reviews are made up. Replace them with real ones before launch.
+- **Review portraits:** illustrated SVGs in `images/reviews/`. If you get customers' permission to use their photos, drop them in the same folder and update the `avatar` paths in `js/content.js`.
 - **Images:** `images/`. These were cropped from screenshots of the live site, so swap in the original high-resolution photos when you have them.
 - **Styles:** `css/styles.css`. The colours are variables at the top of the file.
 

@@ -10,11 +10,11 @@ function brandSections(teaser = false) {
     <section class="band brand">
       <header class="section-head section-head--left">
         <p class="eyebrow">BRAND</p>
-        <h2 class="display">Who We Are</h2>
+        <h1 class="display">Who We Are</h1>
       </header>
       <div class="split">
         <div>
-          <h3 class="ghost-title">About Us</h3>
+          <h2 class="ghost-title">About Us</h2>
           <p>PearlyBeau is essentially a wrist watch brand, our fundamental goal is to offer high quality design and great craftmanship.</p>
           <p>Our timepiece is made with great attention to details and standard, we strive for perfection and we accept and nothing less.</p>
         </div>
@@ -23,7 +23,7 @@ function brandSections(teaser = false) {
       <div class="split split--flip">
         <img src="images/cat-watches.jpg" alt="Two Classic Era watches on a wooden table" loading="lazy">
         <div>
-          <h3 class="ghost-title">Our Story</h3>
+          <h2 class="ghost-title">Our Story</h2>
           <p>Driven by our ambition we embarked on this journey as a female led brand in june 2021.</p>
           <p>We are so proud of the company we are today. Over the years the development of our brand has been inspiring.</p>
           ${teaser ? '<a class="text-link" href="#/brand">More about PearlyBeau →</a>' : ''}
@@ -161,7 +161,7 @@ export function product(id) {
           </details>
         </div>
       </section>
-      ${related.length ? `<section class="band band--grey"><header class="section-head"><p class="eyebrow">YOU MAY ALSO LIKE</p><h2>More ${categoryName(p.category)}</h2></header>${grid(related)}</section>` : ''}`,
+      ${related.length ? `<section class="band band--grey"><header class="section-head"><p class="eyebrow">YOU MAY ALSO LIKE</p><h2>More ${categoryName(p.category)}</h2></header>${grid(related, 3)}</section>` : ''}`,
     mount(root) {
       const form = root.querySelector('#buyForm');
       const qty = form.qty;

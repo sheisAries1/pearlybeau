@@ -44,7 +44,8 @@ function render({ keepScroll = false } = {}) {
   app.innerHTML = view.html;
   document.title = view.title;
   view.mount?.(app);
-  enhance(app);
+  // Re-renders in place (wishlist, cart quantity) shouldn't replay the entrance animations.
+  enhance(app, { instant: keepScroll });
 
   document.querySelectorAll('[data-nav]').forEach((a) => {
     const on = a.dataset.nav === view.nav;
@@ -60,7 +61,18 @@ function render({ keepScroll = false } = {}) {
   firstRender = false;
 }
 
-window.addEventListener('hashchange', () => render());
+// Cross-fade between pages where the browser supports view transitions.
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+window.addEventListener('hashchange', () => {
+  if (document.startViewTransition && !reducedMotion.matches) document.startViewTransition(() => render());
+  else render();
+});
+
+// The skip link points at #app, which the hash router would treat as a page, so handle it here.
+document.querySelector('.skip').addEventListener('click', (e) => {
+  e.preventDefault();
+  app.focus();
+});
 document.addEventListener('pb:rerender', () => render({ keepScroll: true }));
 
 // ---------- Actions inside pages ----------
@@ -161,7 +173,14 @@ menuBtn.addEventListener('click', () => {
 
 // Shadow under the sticky header once the page scrolls.
 const masthead = document.querySelector('.masthead');
-window.addEventListener('scroll', () => masthead.classList.toggle('is-scrolled', window.scrollY > 10), { passive: true });
+// The category row tucks away on scroll down and slides back on scroll up.
+let lastY = window.scrollY;
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  masthead.classList.toggle('is-scrolled', y > 10);
+  if (Math.abs(y - lastY) > 6) masthead.classList.toggle('is-tucked', y > 160 && y > lastY);
+  lastY = y;
+}, { passive: true });
 enhance(document.querySelector('.footer'));
 
 // ---------- Footer ----------
