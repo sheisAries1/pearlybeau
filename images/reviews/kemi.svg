@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Illustrated portrait of Kemi">
+  <defs><clipPath id="c"><circle cx="60" cy="60" r="60"/></clipPath></defs>
+  <g clip-path="url(#c)">
+  <rect width="120" height="120" fill="#DCD1C3"/>
+  <g transform="translate(-7 -1) scale(1.12)">
+  
+  <rect x="52" y="68" width="16" height="22" rx="6" fill="#371F12"/>
+  <path d="M16 124c2-22 18-36 44-36s42 14 44 36z" fill="#A39382"/>
+  <path d="M50 88c2.6 5 6 7.4 10 7.4s7.4-2.4 10-7.4c-3-.6-6.4-1-10-1s-7 .4-10 1z" fill="#4A2C1A"/>
+  
+  
+  <ellipse cx="41" cy="55" rx="4" ry="6" fill="#371F12"/>
+  <ellipse cx="79" cy="55" rx="4" ry="6" fill="#371F12"/>
+  <path d="M60 29c11.5 0 20 9.5 20 23 0 13.8-8.6 26-20 26s-20-12.2-20-26c0-13.5 8.5-23 20-23z" fill="#4A2C1A"/>
+  <path d="M60 78c-6.8 0-12.6-4.4-16.2-10.6 4.7 3 10.2 4.6 16.2 4.6s11.5-1.6 16.2-4.6C72.6 73.6 66.8 78 60 78z" fill="#371F12" opacity=".55"/>
+  <path d="M48 46.5c2.6-1.6 6-1.8 8.4-.6M63.6 45.9c2.4-1.2 5.8-1 8.4.6" stroke="#1C1310" stroke-width="1.9" stroke-linecap="round" fill="none"/>
+  <ellipse cx="52.5" cy="52.5" rx="2.2" ry="1.7" fill="#1A1210"/>
+  <ellipse cx="67.5" cy="52.5" rx="2.2" ry="1.7" fill="#1A1210"/>
+  <path d="M57.4 61.5c1.5 1 3.7 1 5.2 0" stroke="#371F12" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+  <path d="M53.6 67.2c2.1 2.8 10.7 2.8 12.8 0-2.4-.9-4.2-1.2-6.4-.4-2.2-.8-4-.5-6.4.4z" fill="#3A1C17"/>
+  <path d="M53.6 67.2c4 1.4 8.8 1.4 12.8 0" stroke="#2A1510" stroke-width=".8" fill="none" opacity=".6"/>
+  <circle cx="82.0" cy="48.0" r="5.4" fill="#1C1310"/><circle cx="81.25036943749154" cy="41.788348043881484" r="5.4" fill="#1C1310"/><circle cx="79.05256374817041" cy="36.00000919230587" r="5.4" fill="#1C1310"/><circle cx="75.55635950614298" cy="31.029448509754623" r="5.4" fill="#1C1310"/><circle cx="71.0000168525543" cy="27.215400923540777" r="5.4" fill="#1C1310"/><circle cx="65.69404248798536" cy="24.817787037072293" r="5.4" fill="#1C1310"/><circle cx="60.000029189487734" cy="24.000000000021124" r="5.4" fill="#1C1310"/><circle cx="54.306013901778094" cy="24.817770553896064" r="5.4" fill="#1C1310"/><circle cx="49.00003370513441" cy="27.215369080487648" r="5.4" fill="#1C1310"/><circle cx="44.44368177405383" cy="31.0294034768724" r="5.4" fill="#1C1310"/><circle cx="40.94746544136204" cy="35.9999540385059" r="5.4" fill="#1C1310"/><circle cx="38.74964567216149" cy="41.78828652779778" r="5.4" fill="#1C1310"/><circle cx="38.000000000077456" cy="47.99993631384495" r="5.4" fill="#1C1310"/>
+  <path d="M40 46c1-12 9-19 20-19s19 7 20 19c-5-5-12-8-20-8s-15 3-20 8z" fill="#1C1310"/>
+  <g fill="none" stroke="#C9A27E" stroke-width="1.5"><circle cx="52.5" cy="52.5" r="5.6"/><circle cx="67.5" cy="52.5" r="5.6"/><path d="M58.1 52h3.8M46.9 51.4l-5.6-1.2M73.1 51.4l5.6-1.2"/></g>
+  </g>
+  </g>
+</svg>

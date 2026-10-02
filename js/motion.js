@@ -7,9 +7,9 @@ const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
 
 let observer;
 
-function reveal(root) {
+function reveal(root, instant) {
   const items = root.querySelectorAll('[data-reveal]');
-  if (reduced.matches || !('IntersectionObserver' in window)) {
+  if (instant || reduced.matches || !('IntersectionObserver' in window)) {
     items.forEach((el) => el.classList.add('is-in'));
     return;
   }
@@ -63,8 +63,8 @@ function sheen(el) {
   });
 }
 
-export function enhance(root = document) {
-  reveal(root);
+export function enhance(root = document, { instant = false } = {}) {
+  reveal(root, instant);
   if (reduced.matches || !finePointer.matches) return;
   root.querySelectorAll('[data-magnetic]').forEach(magnetic);
   root.querySelectorAll('[data-tilt]').forEach(tilt);

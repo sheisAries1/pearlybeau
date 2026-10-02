@@ -38,7 +38,8 @@ export function wishButton(p) {
     aria-pressed="${on}" aria-label="${on ? 'Remove from' : 'Add to'} wishlist: ${esc(p.name)} ${esc(p.variant)}">${icons.heart}</button>`;
 }
 
-export function productCard(p) {
+// level: heading level for the product name, so it fits the page's outline.
+export function productCard(p, level = 2) {
   const badge = p.badges[0] ? `<span class="tag">${esc(p.badges[0])}</span>` : '';
   const action = p.options
     ? `<a class="btn btn--ghost btn--sm" href="#/product/${p.id}">Choose amount</a>`
@@ -50,16 +51,16 @@ export function productCard(p) {
       ${wishButton(p)}
       <div class="card__body">
         <p class="card__kicker">${esc(p.name)}</p>
-        <h3 class="card__title"><a href="#/product/${p.id}">${esc(p.variant)}</a></h3>
+        <h${level} class="card__title"><a href="#/product/${p.id}">${esc(p.variant)}</a></h${level}>
         <p class="card__price">${priceLabel(p)}</p>
         ${action}
       </div>
     </article>`;
 }
 
-export function grid(products) {
+export function grid(products, level = 2) {
   if (!products.length) return '<p class="empty">Nothing here yet.</p>';
-  return `<div class="grid">${products.map(productCard).join('')}</div>`;
+  return `<div class="grid">${products.map((p) => productCard(p, level)).join('')}</div>`;
 }
 
 export function categoryName(slug) {
